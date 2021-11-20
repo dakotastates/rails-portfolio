@@ -1,0 +1,15 @@
+
+<div class="card" style="width: 18rem;">
+  <img src="<%= @project.image_url %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @project.title %></h5>
+    <p class="card-text"><%= @project.description %></p>
+    <a href="<%= @project.github_url %>" class="btn btn-primary">Github</a>
+    <a href="<%= @project.video_url %>" class="btn btn-primary">Demo</a>
+
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_project_path(@project), class:'btn btn-secondary' %>
+<%= link_to 'Back', projects_path, class:'btn btn-secondary' %>

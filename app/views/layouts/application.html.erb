@@ -17,6 +17,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <% if notice %>
+      <%= render 'layouts/alerts' %>
+    <% end %>
     <%= yield %>
 
     <!-- Optional JavaScript; choose one of the two! -->
