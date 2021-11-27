@@ -9,7 +9,8 @@ class HomeController < ApplicationController
     phone = params[:phone]
     body = params[:message]
     ContactMailer.contact_email(name, email, phone, body).deliver
-    redirect_to root_path, notice: 'Message sent'
+      flash[:notice] = 'Message sent!'
+      redirect_to root_path
   end
 
 

@@ -3039,7 +3039,8 @@ textarea.form-control-lg {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #16a085;
+  /* background-color: #16a085; */
+  background-color: #7395ae; */
   border-color: #15967d;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
@@ -11407,7 +11408,8 @@ html {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #1abc9c;
+    /* background: #1abc9c; */
+    background: #7395ae;
   }
 
   #mainNav.navbar-shrink {
@@ -11478,7 +11480,8 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  /* background-color: rgba(26, 188, 156, 0.9); */
+  background-color: rgba(115, 149, 163);
 
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
