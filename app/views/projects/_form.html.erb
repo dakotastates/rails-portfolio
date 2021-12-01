@@ -32,6 +32,23 @@
     <%= form.text_field :image_url, class:'form-control', placeholder:'Image URL' %>
   </div>
 
+  <div class="field mb-3">
+
+
+  <p>Categories</p>
+    <%= form.collection_check_boxes(:category_ids, Category.all, :id, :category) %>
+  </div>
+
+  <p>Or Create a New Category...</p>
+
+  <%= form.fields_for :categories do |cat_fields| %>
+  <div class="field mb-3">
+    <%= cat_fields.text_field :category, class:'form-control', placeholder:'Category' %>
+  </div>
+  <% end %>
+
+
+
   <div class="actions">
     <%= form.submit class:'btn btn-secondary' %>
   </div>

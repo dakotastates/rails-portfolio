@@ -8,6 +8,7 @@ Rails.application.routes.draw do
         get '/', to: 'admin#index', as: :admin_root
 
         resources :projects
+        resources :categories
 
       end
 

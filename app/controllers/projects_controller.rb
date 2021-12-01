@@ -13,10 +13,12 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    3.times {@project.categories.build}
   end
 
   # GET /projects/1/edit
   def edit
+    3.times {@project.categories.build}
   end
 
   # POST /projects or /projects.json
@@ -36,6 +38,8 @@ class ProjectsController < ApplicationController
 
   # PATCH/PUT /projects/1 or /projects/1.json
   def update
+    # raise params.inspect
+    # byebug
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: "Project was successfully updated." }
@@ -64,6 +68,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:title, :description, :github_url, :video_url, :image_url)
+      params.require(:project).permit(:title, :description, :github_url, :video_url, :image_url, category_ids: [], categories_attributes: [:id, :category])
     end
 end
