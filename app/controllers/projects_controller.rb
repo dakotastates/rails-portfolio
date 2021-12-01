@@ -13,12 +13,13 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
-    3.times {@project.categories.build}
+    # 3.times {@project.categories.build}
+    @project.categories.build
   end
 
   # GET /projects/1/edit
   def edit
-    3.times {@project.categories.build}
+    @project.categories.build
   end
 
   # POST /projects or /projects.json
