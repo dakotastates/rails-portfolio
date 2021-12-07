@@ -10,16 +10,26 @@
             <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        <!-- Portfolio Grid Items-->
+
         <div class="row justify-content-center">
+          <div class="col-lg-12 d-flex justify-content-center" >
+            <ul id="portfolio-flters">
+              <li class='btn btn-secondary active' data-filter="*">All</li>
+              <% @categories.each do |cat| %>
+                <li class='btn btn-secondary' data-filter=".filter-<%=cat.category %>"><%= cat.category %></li>
+              <% end %>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center portfolio-container">
 
           <% @projects.each do |project| %>
-
-
-
             <!-- Dynamic Portfolio Item-->
-            <div class="col-md-6 col-lg-4 mb-5">
-                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal<%= project.id %>">
+            <div class="col-md-6 col-lg-4 mb-5 portfolio-item <%= project.categories.map{|cat| 'filter-'+cat.category}.join(' ') %>">
+                <div class=" mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal<%= project.id %>">
                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                         <div class="portfolio-item-caption-content text-center text-white"><%= project.title %></div>
                     </div>

@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @projects = Project.all
+    @categories = Category.all
   end
 
   def send_mail
