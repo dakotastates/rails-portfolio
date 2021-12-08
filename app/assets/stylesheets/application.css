@@ -3057,7 +3057,7 @@
  .btn-primary:hover {
    color: #fff;
    /* background-color: #16a085; */
-   background-color: #7395ae; */
+   background-color: #7395ae;
    border-color: #15967d;
  }
  .btn-check:focus + .btn-primary, .btn-primary:focus {
