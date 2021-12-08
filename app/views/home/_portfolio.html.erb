@@ -57,6 +57,7 @@
                                         <!-- Portfolio Modal - Image-->
                                           <img class="img-fluid rounded mb-5" src=<%= project.image_url %> alt=<%= project.title %> />
                                         <!-- Portfolio Modal - Text-->
+                                        <h5 class="mb-4">Categories: <%=project.categories.map{|cat| cat.category}.join(' ') %> </h5>
                                         <p class="mb-4"><%= project.description %></p>
                                         <button class="btn btn-primary" href=<%= project.github_url %> data-bs-dismiss="modal">
                                             <i class="fab fa-github"></i>
