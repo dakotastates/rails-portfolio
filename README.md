@@ -1,4 +1,4 @@
-# README
+# Dakota's Rails Portfolio App
 
 A simple and clean Fullstack software engineering Portfolio Website for Dakota States. Simplicity is sometimes best for what you might want to achieve. For this portfolio website, ruby on rails was used to create the sites basic functionality. This site is contains an admin page only accessible to one user, 'Dakota States'. The admin page use used to dynamically add Projects as they are created. Since this is a minimalist portfolio sight, only an about me page, access to the portfolio, and contact functionality is available.
 
