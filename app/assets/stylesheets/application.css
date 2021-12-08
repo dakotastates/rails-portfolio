@@ -11498,7 +11498,7 @@
    transition: all 0.2s ease-in-out;
    opacity: 0;
    /* background-color: rgba(26, 188, 156, 0.9); */
-   background-color: rgba(115, 149, 163);
+   background-color: rgba(115, 149, 163, 1);
 
  }
  .portfolio .portfolio-item .portfolio-item-caption:hover {
