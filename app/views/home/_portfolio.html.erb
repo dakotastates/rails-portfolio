@@ -59,14 +59,10 @@
                                         <!-- Portfolio Modal - Text-->
                                         <h5 class="mb-4">Categories: <%=project.categories.map{|cat| cat.category}.join(' ') %> </h5>
                                         <p class="mb-4"><%= project.description %></p>
-                                        <button class="btn btn-primary" href=<%= project.github_url %> data-bs-dismiss="modal">
-                                            <i class="fab fa-github"></i>
-                                            Github
-                                        </button>
-                                        <button class="btn btn-primary" href=<%= project.github_url %> data-bs-dismiss="modal">
-                                            <i class="fas fa-play"></i>
-                                            Demo
-                                        </button>
+
+                                        <%=link_to 'Github', project.github_url, class:'btn btn-primary' %>
+                                        <%=link_to 'Demo', project.video_url, class:'btn btn-primary' %>
+
                                     </div>
                                 </div>
                             </div>
